@@ -1,0 +1,151 @@
+
+
+
+
+.header {
+    background-color: rgb(189, 189, 189);
+}
+
+body {
+    background-color: rgb(146, 146, 146);
+}
+
+.cantidadCarrito {
+    background-color: rgb(93, 93, 222);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 6rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.itemList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tarjeta {
+    margin: 1rem;
+}
+
+.cardContent {
+    align-items: center;
+}
+
+.cartWidget {
+    align-self: center;
+}
+
+.detalleProducto {
+    display: flex;
+    justify-content: center;
+    text-justify: auto;
+}
+
+.descripcion {
+    text-align: center;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.contenedorDelContador {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.navegacion {
+   
+
+    background: url('https://cdn.arrivocycling.com/arrivo/product/6368ea4225321549ab41438c/photospano/0/img/banner%202.jpeg');
+    height: 400px;
+    padding-top: 20px;
+  
+  }
+  
+  .logonavbar img {
+  height: 150px;
+  margin-top: auto;
+  padding-right: 1000px;
+  padding-left: 10px;
+  
+  }
+  .material-symbols-outlined{
+  color: white;
+  justify-content:space-around;
+  padding: 10px;
+  }
+  p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  
+  }
+  .greet{
+    display: flex;
+    color: rgb(200, 70, 34);
+    text-align: center;
+    margin: auto;
+    justify-content: space-around;
+    font-size: 50px;
+  
+  }
+  /*productos*/
+  .listadoProductos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+  }
+  img.imgProductos {
+    height: 200px;
+  }
+  .bienvenido{
+    display: flex;
+    background: url('https://i.ytimg.com/vi/bil5v6kDUIc/maxresdefault.jpg');
+  }
+  .footer-estatico{
+    height: 100px;
+    background-color: black;
+    margin-top: 10%;
+    color: white;
+  }
+  button.chakra-button.boton-detalle.css-jut409 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+  
+  }
+  button.chakra-button.css-1mcat1a {
+    margin-top: 13px;
+}
+.form-contacto {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+input#field-\:r13\: {
+    margin-top: 20px;
+}
+div#field-\:r13\:-helptext {
+    margin-top: 20px;
+}
+button.chakra-button.boton-contacto.css-jut409 {
+    margin-top: 20px;
+}

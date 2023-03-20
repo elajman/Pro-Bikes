@@ -24,7 +24,7 @@ const ItemDetail = ({producto}) => {
         </CardBody>
         <Divider />
         <CardFooter>
-          <ButtonGroup className='contenedorDelContador'>
+          <ButtonGroup className='detalle-contenedor'>
             <ItemCount/>
             <Button>
               Agregar al Carrito

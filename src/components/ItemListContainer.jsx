@@ -2,11 +2,11 @@ import React from 'react'
 import ItemList from './ItemList'
 import productos from './productos.json'
 import { useParams } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState} from 'react'
 
 
 const ItemListContainer = () => {
-
+  
   const {categoria}  = useParams();
 
   const getProductos = () => {

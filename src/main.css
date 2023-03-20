@@ -1,15 +1,3 @@
-
-
-
-
-.header {
-    background-color: rgb(189, 189, 189);
-}
-
-body {
-    background-color: rgb(146, 146, 146);
-}
-
 .cantidadCarrito {
     background-color: rgb(93, 93, 222);
     color: white;
@@ -53,22 +41,17 @@ body {
     justify-content: space-evenly;
 }
 
-.contenedorDelContador {
+.detalle-contenedor {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-
 .navegacion {
-   
-
     background: url('https://cdn.arrivocycling.com/arrivo/product/6368ea4225321549ab41438c/photospano/0/img/banner%202.jpeg');
     height: 400px;
-    padding-top: 20px;
-  
+    padding-top: 20px; 
   }
   
   .logonavbar img {
@@ -90,15 +73,6 @@ body {
   text-align: center;
   
   }
-  .greet{
-    display: flex;
-    color: rgb(200, 70, 34);
-    text-align: center;
-    margin: auto;
-    justify-content: space-around;
-    font-size: 50px;
-  
-  }
   /*productos*/
   .listadoProductos {
     display: flex;
@@ -114,7 +88,6 @@ body {
     background: url('https://i.ytimg.com/vi/bil5v6kDUIc/maxresdefault.jpg');
   }
   .footer-estatico{
-    height: 100px;
     background-color: black;
     margin-top: 10%;
     color: white;
@@ -148,4 +121,21 @@ div#field-\:r13\:-helptext {
 }
 button.chakra-button.boton-contacto.css-jut409 {
     margin-top: 20px;
+}
+button#menu-button-\:r3\: {
+    margin-top: 17px;
+}
+button.chakra-button.css-jut409 {
+    margin-top: 18px;
+}
+p.chakra-text.css-0 {
+    width: 21%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+   
 }

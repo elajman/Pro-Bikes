@@ -29,11 +29,11 @@ const ItemDetailContainer = () => {
   fetchingProductos();
 
 
-  let productoARenderizar = productos.find((producto) => producto.id === id)
+  let productoBuscado = productos.find((producto) => producto.id === id)
 
   return (
     <div>
-      <ItemDetail producto={productoARenderizar}/>
+      <ItemDetail producto={productoBuscado}/>
     </div>
   )
 }

@@ -1,14 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Flex } from '@chakra-ui/react'
 
 const LogoNav = () => {
   return (
     <div className='logonavbar'>
+        <Flex>
         <Link to={"/"}> 
-          <img src="https://images-platform.99static.com//eURYz52nOwUmEfPTbW-T1lJYFRk=/493x0:1274x781/fit-in/500x500/99designs-contests-attachments/35/35499/attachment_35499555" alt="logo"  />
+          <img src="../public/logo.png" alt="logo"  />
+        
         </Link>
+    </Flex>
     </div>
   )
 }
 
 export default LogoNav
+
+

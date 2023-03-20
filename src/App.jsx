@@ -7,10 +7,10 @@ import Footer from './components/Footer'
 import Contacto from './components/Contacto'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import Cart from './components/Cart'
+import About from './components/About'
 
 
 const App = () => {
-
 
   return (
     <BrowserRouter>
@@ -19,9 +19,10 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={ <ItemListContainer/> }/>
           <Route exact path='/categoria/:categoria' element={ <ItemListContainer/> }/>
-          <Route exact path='/contacto' element={ <Contacto />} />
           <Route exact path='/producto/:id' element={ <ItemDetailContainer/> }/>
+          <Route exact path='/contacto' element={ <Contacto />} />
           <Route exact path='/cart' element={ <Cart/> }/>
+          <Route exact path='/about' element={<About/>} />
         </Routes>
         <Footer/>
       </ChakraProvider>

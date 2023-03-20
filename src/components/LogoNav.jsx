@@ -7,7 +7,7 @@ const LogoNav = () => {
     <div className='logonavbar'>
         <Flex>
         <Link to={"/"}> 
-          <img src="../public/logo.png" alt="logo"  />
+          <img src="/logo.png" alt="logo"  />
         
         </Link>
     </Flex>

@@ -30,7 +30,7 @@ const ItemListContainer = () => {
 
   fetchingProductos();
 
-  const filtroProductos = productos.filter((producto) => (producto.categoria.toLowerCase()) === categoria)
+  const filtroProductos = productos.filter((producto) => producto.categoria === categoria)
   
   let renderizoProductos = [];
   renderizoProductos = categoria ? filtroProductos : productos

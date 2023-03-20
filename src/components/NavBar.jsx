@@ -23,11 +23,8 @@ const NavBar = () => {
         <Menu>
             <MenuButton as={Button}>Productos</MenuButton>
             <MenuList>
-                <Link to={'/categoria/Hard Tail'}><MenuItem>Specialized</MenuItem></Link>
-                <Link to={`/categoria/Full Suspension`}><MenuItem>Trek</MenuItem></Link>
-                <Link to={`/categoria/Full Suspension`}><MenuItem>Scott</MenuItem></Link>
-                <Link to={`/categoria/Full Suspension`}><MenuItem>Cannondale</MenuItem></Link>
-                <Link to={`/categoria/Full Suspension`}><MenuItem>BMC</MenuItem></Link>  
+                <Link to={'/categoria/Hard Tail'}><MenuItem>Rigidas</MenuItem></Link>
+                <Link to={`/categoria/Full Suspension`}><MenuItem>Full Suspension</MenuItem></Link>
             </MenuList>
         </Menu>
         <Box>

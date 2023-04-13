@@ -1,27 +1,27 @@
-import React from 'react'
-import { Card, CardBody, Image, Stack, Heading, Text, Button } from '@chakra-ui/react'
-import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
+import { Link } from 'react-router-dom'
 
-const Item = ({ producto }) => {
 
-  return (
-
-    <Card maxW='xs' className='tarjeta'>
-      <CardBody>
-        <Image src={producto.imgUrl} alt={producto.nombre} />
-        <Stack mt='8' spacing='s' className='cardContent'>
-          <Heading size='md'>{producto.nombre}</Heading>
-          <Text color="gray.600">Stock:{producto.stock}</Text>
-          <Text color='red' fontSize='xl'>
-            Precio u$ {producto.precio}
-          </Text>
-          <Link to={`/producto/${producto.id}`}>
-        <Button colorScheme='blue'>Detalle</Button>
-        </Link>
-        </Stack>
-      </CardBody>
-    </Card>
+const Item = ({ id , title, price, category, image }) => {
   
+  return (
+    <>
+    <Card className="text-center"  style={{ width: '18rem', margin:'3rem', paddingTop:'1rem' }} key={id}>
+      <Card.Img variant="top" src={image} />
+      <Card.Body>
+        <Card.Title><h6>Marca:</h6> {title}</Card.Title>
+        <ListGroup className="list-group-flush">
+          <ListGroup.Item>Categoria: {category}</ListGroup.Item>
+          <ListGroup.Item>Precio: <strong>${price}</strong></ListGroup.Item>
+        </ListGroup>
+        <Link to={`/itemdetail/${id}`}>
+          <Button variant="outline-danger"> Detalles</Button>
+        </Link>
+      </Card.Body>
+    </Card>
+    </>
   )
 }
 

@@ -1,38 +1,48 @@
-import React from 'react'
 import ItemCount from './ItemCount'
-import { Card, CardBody, Image, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
+import Row from 'react-bootstrap/Row'
+import Badge from 'react-bootstrap/Badge'
 
-const ItemDetail = ({producto}) => {
 
+
+const ItemDetail = ({data,id}) => {
   return (
-    <div className='detalleProducto'>
-      <Card maxW='sm'>
-        <CardBody>
-          <Image src={producto.imgUrl} alt={producto.nombre} borderRadius='lg'/>
-          <Stack mt='6' spacing='3' className='cardContent'>
-            <Heading size='xl' color="blue.500">{producto.nombre}</Heading>
-            <Text color="green.500">
-              Stock: {producto.stock}
-            </Text>
-            <Text color='blue.500' fontSize='2xl'>
-              Precio: u$ {producto.precio}
-            </Text>
-            <Text color="blackAlpha.500" className='descripcion' fontSize='md' label="Descripcion">
-            {producto.descripcion}
-            </Text>
-          </Stack>
-        </CardBody>
-        <Divider />
-        <CardFooter>
-          <ButtonGroup className='detalle-contenedor'>
-            <ItemCount/>
-            <Button>
-              Agregar al Carrito
-            </Button>
-          </ButtonGroup>
-        </CardFooter>
-      </Card>
-    </div>
+    <>
+    
+    <Row className="justify-content-center" >
+    <Card border="warning" style={{ width: '25rem', margin:'3rem',paddingTop:'1rem' }} key={id} >
+      <Card.Img variant="top" src= {data.image} />
+      <Card.Body>
+        <Card.Title> <h4>{data.title}</h4> </Card.Title>
+        <h6>Descripcion:</h6>
+        <Card.Text>
+        {data.description}
+        </Card.Text>
+        <ListGroup className="list-group-flush">
+        <ListGroup.Item>Categoria: {data.category}</ListGroup.Item>
+        <ListGroup.Item>Stock: {data.stock}</ListGroup.Item>
+        <ListGroup.Item>Precio:  {data.oferta ? (
+          <>
+            <strong> ${data.price / 2}</strong>
+            <Badge bg="danger">Oferta</Badge>
+            <del>${data.price}</del>
+          </>
+        ) : data.price}
+        </ListGroup.Item>
+        </ListGroup >
+        <ItemCount
+        id={id}
+        image={data.image}
+        title={data.title}
+        price={data.oferta ? data.price / 2 : data.price}
+        stock={data.stock}
+        />
+      </Card.Body>
+    </Card>
+
+    </Row>
+    </>
   )
 }
 

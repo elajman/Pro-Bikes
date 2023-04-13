@@ -1,141 +1,39 @@
-.cantidadCarrito {
-    background-color: rgb(93, 93, 222);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    width: 6rem;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-    border: 1px solid black;
-    border-radius: 5px;
+.footer-estatico{
+    background: url('https://www.freymedical.eu/wp-content/uploads/2020/05/xFrey_www_banner-covid19-1-1920x200.jpg.pagespeed.ic.irf4RyNen0.jpg');
+    margin-top: 4%;
+    color: rgb(11, 9, 9);
+    height: 110px;
 }
-
-.itemList {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.tarjeta {
-    margin: 1rem;
-}
-
-.cardContent {
-    align-items: center;
-}
-
-.cartWidget {
-    align-self: center;
-}
-
-.detalleProducto {
-    display: flex;
-    justify-content: center;
-    text-justify: auto;
-}
-
-.descripcion {
-    text-align: center;
-    margin: auto;
-    justify-content: space-evenly;
-}
-
-.detalle-contenedor {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.navegacion {
-    background: url('https://cdn.arrivocycling.com/arrivo/product/6368ea4225321549ab41438c/photospano/0/img/banner%202.jpeg');
-    height: 400px;
-    padding-top: 20px; 
-  }
-  
-  .logonavbar img {
-  height: 150px;
-  margin-top: auto;
-  padding-right: 1000px;
-  padding-left: 10px;
-  
-  }
-  .material-symbols-outlined{
-  color: white;
-  justify-content:space-around;
-  padding: 10px;
-  }
-  p {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  
-  }
-  /*productos*/
-  .listadoProductos {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-  }
-  img.imgProductos {
-    height: 200px;
-  }
-  .bienvenido{
-    display: flex;
-    background: url('https://i.ytimg.com/vi/bil5v6kDUIc/maxresdefault.jpg');
-  }
-  .footer-estatico{
-    background-color: black;
-    margin-top: 10%;
-    color: white;
-  }
-  button.chakra-button.boton-detalle.css-jut409 {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-evenly;
-  
-  }
-  button.chakra-button.css-1mcat1a {
-    margin-top: 13px;
-}
-.form-contacto {
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-input#field-\:r13\: {
-    margin-top: 20px;
-}
-div#field-\:r13\:-helptext {
-    margin-top: 20px;
-}
-button.chakra-button.boton-contacto.css-jut409 {
-    margin-top: 20px;
-}
-button#menu-button-\:r3\: {
-    margin-top: 17px;
-}
-button.chakra-button.css-jut409 {
-    margin-top: 18px;
-}
-p.chakra-text.css-0 {
-    width: 21%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
+.material-symbols-outlined {
+   
+    font-size: 40px !important;
+    color: rgb(133, 11, 11) !important;
    
 }
+.form-return {
+display: 'flex';
+justify-content: 'center';
+align-items: 'center';
+}  
+.nav-bar{
+    background: url('https://www.freymedical.eu/wp-content/uploads/2020/05/xFrey_www_banner-covid19-1-1920x200.jpg.pagespeed.ic.irf4RyNen0.jpg');
+    height: 130px;
+    
+}
+form {
+    margin: auto;
+}
+div#responsive-navbar-nav {
+    margin-left: 0%;
+    background-color: rgb(233, 189, 189) !important;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto, auto;
+    justify-content: center;
+}
+
+/*https://cdn.arrivocycling.com/arrivo/product/6368ea4225321549ab41438c/photospano/0/img/banner%202.jpeg*/

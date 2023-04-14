@@ -3,11 +3,11 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import { Link } from "react-router-dom"
 import { useState,useContext } from 'react'
-import { CartDataContext } from '../context/CartContext'
+import { ContextCart } from '../context/CartContext'
 
-const ItemCount = ({id,title,price,image,stock}) => {
-// funciones de suma y resta
-const {addToCart, cart, setCart} = useContext (CartDataContext)
+const ItemCount = ({id, title, price, image, stock}) => {
+
+const {addToCart, cart, setCart} = useContext (ContextCart)
 const [counter, setCounter] = useState (0);
 const bikeInCart = cart.filter(bike => bike.id === id);
 const bikeTotalInCart = bikeInCart.length > 0 ? bikeInCart[0].buyTotal : 0

@@ -5,7 +5,9 @@
     height: 110px;
 }
 .material-symbols-outlined {
-   
+    display: "flex";
+    justify-Content: "center";
+    align-items: "center";
     font-size: 40px !important;
     color: rgb(133, 11, 11) !important;
    
@@ -35,5 +37,14 @@ div#responsive-navbar-nav {
     margin: auto, auto;
     justify-content: center;
 }
-
-/*https://cdn.arrivocycling.com/arrivo/product/6368ea4225321549ab41438c/photospano/0/img/banner%202.jpeg*/
+.carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrito-vacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}

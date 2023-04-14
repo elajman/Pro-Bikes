@@ -1,5 +1,5 @@
 import { createContext ,useState, useEffect } from "react"
-export const CartDataContext = createContext()
+export const ContextCart = createContext()
 
 
 const CartContext = ({children}) => {
@@ -26,12 +26,12 @@ const addToCart = (bike) => {
   }
 };
 
-  const removeFromCart = (bikeId) => {
+  const remuevoDelCarrito = (bikeId) => {
     const newCart = cart.filter((bike) => bike.id !== bikeId)
     setCart(newCart)
   };
 
-  const cartPriceTotal= ()=>{
+  const cartPrecioTotal = ()=>{
     return cart.reduce((total, bike) => total + (bike.price * bike.buyTotal), 0)
   }
 
@@ -41,9 +41,9 @@ const addToCart = (bike) => {
   
 
   return (
-    <CartDataContext.Provider value={{cart, setCart, removeFromCart, addToCart, clearCart, cartPriceTotal}}>
+    <ContextCart.Provider value={{cart, setCart, remuevoDelCarrito, addToCart, clearCart, cartPrecioTotal}}>
       {children}
-    </CartDataContext.Provider>
+    </ContextCart.Provider>
   )
 }
 

@@ -3,16 +3,16 @@ import { useContext } from 'react'
 import {Link } from 'react-router-dom'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
-import { CartDataContext } from '../context/CartContext'
+import { ContextCart } from '../context/CartContext'
 import OrderForm from './Formulario'
 
 const Cart = () => {
-  const { cart, removeFromCart, cartPriceTotal } = useContext(CartDataContext)
+  const { cart, remuevoDelCarrito, cartPrecioTotal } = useContext(ContextCart)
   return (
     <div>
       {cart.length !== 0 ? (
       <div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className='carrito'>
       <Table responsive hover style={{ boxSizing: 'inherit', textAlign: 'left', marginTop:'3rem' }}>
         <thead>
           <tr>
@@ -25,20 +25,20 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody style={{ verticalAlign: 'middle' }}>
-          {cart.map((game) => (
-            <tr key={game.id}>
+          {cart.map((bike) => (
+            <tr key={bike.id}>
               <td>
-                <Button variant="outline-danger" onClick={() => removeFromCart (game.id)} >
-                <span className="material-symbols-outlined" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
+                <Button variant="outline-danger" onClick={() => remuevoDelCarrito (bike.id)} >
+                <span className="material-symbols-outlined">
                   delete
                 </span>
                 </Button>
               </td>
-              <td><img src={game.image} alt="" style={{ width: '6rem' }} /> </td>
-              <td>{game.title}</td>
-              <td>${game.price}</td>
-              <td>{game.buyTotal}</td>
-              <td>${game.buyTotal * game.price}</td>
+              <td><img src={bike.image} alt="" style={{ width: '6rem' }} /> </td>
+              <td>{bike.title}</td>
+              <td>${bike.price}</td>
+              <td>{bike.buyTotal}</td>
+              <td>${bike.buyTotal * bike.price}</td>
             </tr>
           ))}
         </tbody>
@@ -55,7 +55,7 @@ const Cart = () => {
         <tbody >
           <tr >
           <th>Total</th>
-          <td>${cartPriceTotal()}</td>
+          <td>${cartPrecioTotal()}</td>
           <td></td>
           <td></td>
           </tr>
@@ -67,7 +67,7 @@ const Cart = () => {
 
       </div>
             ):(
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop:'2rem'}}>
+              <div className='carrito-vacio'>
                 <h3>El Carrito Esta Vacio</h3>
                 <Button variant="outline-primary" size="lg" as={Link} to="/">Volver a Productos</Button>
               </div>

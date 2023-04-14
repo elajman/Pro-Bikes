@@ -1,19 +1,19 @@
 import Badge from 'react-bootstrap/Badge'
-import { CartDataContext } from '../context/CartContext'
+import { ContextCart } from '../context/CartContext'
 import { useContext } from 'react'
 
 const CartWidget = () => {
-    const{cart, setcart} = useContext(CartDataContext)
+    const{cart, setcart} = useContext(ContextCart)
 
-    const badgeTotal = cart.reduce((total, bike) => total + bike.buyTotal, 0)
+    const loteTotal = cart.reduce((total, bike) => total + bike.buyTotal, 0)
 
     return (
         <div>
             <span className="material-symbols-outlined">
         shopping_cart
         </span>
-        {badgeTotal > 0 && (
-        <Badge>{badgeTotal}</Badge>
+        {loteTotal > 0 && (
+        <Badge>{loteTotal}</Badge>
         )}
         </div>
     )

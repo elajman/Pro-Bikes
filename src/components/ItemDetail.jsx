@@ -22,14 +22,7 @@ const ItemDetail = ({data,id}) => {
         <ListGroup className="list-group-flush">
         <ListGroup.Item>Categoria: {data.category}</ListGroup.Item>
         <ListGroup.Item>Stock: {data.stock}</ListGroup.Item>
-        <ListGroup.Item>Precio:  {data.oferta ? (
-          <>
-            <strong> ${data.price / 2}</strong>
-            <Badge bg="danger">Oferta</Badge>
-            <del>${data.price}</del>
-          </>
-        ) : data.price}
-        </ListGroup.Item>
+        <ListGroup.Item>Precio:  {data.price}</ListGroup.Item>
         </ListGroup >
         <ItemCount
         id={id}

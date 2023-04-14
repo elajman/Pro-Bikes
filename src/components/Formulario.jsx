@@ -4,12 +4,12 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
 import Popover from 'react-bootstrap/Popover'
-import { CartDataContext } from '../context/CartContext'
+import { ContextCart } from '../context/CartContext'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 const OrderForm = () => {
-  const {cart, cartPriceTotal, clearCart} = useContext(CartDataContext)
+  const {cart, cartPrecioTotal, clearCart} = useContext(ContextCart)
   const [show, setShow] = useState(false)
   const [orderId, setOrderId] = useState(null)
   const [name , SetName] = useState ("")
@@ -43,11 +43,11 @@ const OrderForm = () => {
     lastName,
     address,
     cart:({cart}),
-    total:cartPriceTotal(),
+    total:cartPrecioTotal(),
     date:serverTimestamp(),
   };
 
-const orderCollection=collection(db, "order")
+const orderCollection = collection(db, "order")
 const handleClose = () => setShow(false)
 const handleShow = () => setShow(true)
 
@@ -101,7 +101,7 @@ const handleShow = () => setShow(true)
         <Modal.Header closeButton>
           <Modal.Title>Compra Exitosa</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Total de su compra es :<strong>${cartPriceTotal()}</strong>
+        <Modal.Body>Total de su compra es :<strong>${cartPrecioTotal()}</strong>
         </Modal.Body>
         <Modal.Body>El ID de su compra es:<strong>{orderId}</strong>
         </Modal.Body>
